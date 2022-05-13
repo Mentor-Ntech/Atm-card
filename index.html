@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATMCARD</title>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="ATMForm">
+            <div class="container">
+                <form action="ATMForm" class="Register">
+                    <div>
+                        <label for="firstname">Firstname</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Bob">
+                    </div>
+
+                    <div>
+                        <label for="lastname">Lastname</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Jame">
+                    </div>
+
+                    <div>
+                        <label for="option">Kindly choose prefer option:</label>
+                        <select name="option" id="option">
+                            <option value="current">Current</option>
+                            <option value="savings">Savings</option>
+                        </select>
+                        
+
+                    </div>
+                    <div class="flexBox">
+                        <button class="btnFull">submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+            
+            <div class="ATMBox">
+                <div class="atmCardBox">
+                    <div class="tmLogo">
+                    <p class="atmType">debit</p>
+                    <img src="img/uba 1.png" alt="bank logo" class="images">
+                    </div>
+                    <ul class="list">
+                        <li class="listItemS">
+                            <ion-icon name="qr-scanner"></ion-icon>
+                        </li>
+                        <li class="listItem">
+                            <ion-icon name="logo-rss"></ion-icon>
+                        </li>
+                    </ul>
+                   
+                    <p class="cardDigit" id="cardDigit--1">**** **** **** 5678</p>
+                    <p class="expDate" id="expDate--1">EXPIRES Endof:07/26</p>
+                    
+                    <div class="holderLogo">
+                        <p class="holderName">Naheem Oloyede</p>
+                        <img src="/img/mastercar.png" alt="mastercard logo" class="materlogo">
+                    </div>
+                    
+                </div>
+               
+            </div>
+            <div class="overlay hidden"></div>
+        </section>
+    </main>
+    <script src="javascript.js"></script>
+</body>
+</html>
