@@ -11,40 +11,44 @@
 </head>
 <body>
     <main>
-        <section class="ATMForm">
-            <div class="container">
-                <form action="ATMForm" class="Register">
+        <section class="ATMForms">
+            <div class="formCon">
+                <form action="atmForm" class="Register">
                     <div>
                         <label for="firstname">Firstname</label>
-                        <input type="text" name="firstname" id="firstname" placeholder="Bob">
+                        <input type="text" name="firstname" id="firstname" placeholder="Firstname">
                     </div>
 
                     <div>
                         <label for="lastname">Lastname</label>
-                        <input type="text" name="lastname" id="lastname" placeholder="Jame">
+                        <input type="text" name="lastname" id="lastname" placeholder="Lastname">
                     </div>
 
                     <div>
-                        <label for="option">Kindly choose prefer option:</label>
-                        <select name="option" id="option">
+                        <select name="account-type" id="account-type">
+                            <option value="account-option">Kindly select account option</option>
                             <option value="current">Current</option>
                             <option value="savings">Savings</option>
+                            <option value="business">Business</option>
                         </select>
                         
 
                     </div>
                     <div class="flexBox">
-                        <button class="btnFull">submit</button>
+                        <input type="submit" value="sign up here" id="submit">
                     </div>
                     
                 </form>
             </div>
             
             <div class="ATMBox">
-                <div class="atmCardBox">
+                <div class="atm-proxy">
+                    Your card will display here
+                </div>
+                <div class="atmCardBox hidden">
                     <div class="tmLogo">
-                    <p class="atmType">debit</p>
-                    <img src="img/uba 1.png" alt="bank logo" class="images">
+                    <p class="account-type">Savings</p>
+                    <img src="img/uba 1.png" alt="bank logo">
                     </div>
                     <ul class="list">
                         <li class="listItemS">
@@ -55,18 +59,21 @@
                         </li>
                     </ul>
                    
-                    <p class="cardDigit" id="cardDigit--1">**** **** **** 5678</p>
-                    <p class="expDate" id="expDate--1">EXPIRES Endof:07/26</p>
+                    <p class="cardDigit">4321567845235678</p>
+                     <div class="expiry">
+                         <span>Expiry:</span>
+                         <span class="expiry-date">17/24</span>
+                     </div>
                     
                     <div class="holderLogo">
-                        <p class="holderName">Naheem Oloyede</p>
-                        <img src="/img/mastercar.png" alt="mastercard logo" class="materlogo">
+                        <span class="firstname">Firstname</span>
+                        <span class="lastname">Lastname</span>
+                        <img src="/img/mastercar.png" alt="mastercard logo">
                     </div>
                     
                 </div>
                
             </div>
-            <div class="overlay hidden"></div>
         </section>
     </main>
     <script src="javascript.js"></script>

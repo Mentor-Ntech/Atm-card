@@ -7,44 +7,39 @@
 }
 .html {
     font-size: 62.5%;
+
+
 }
 
-
-
-body {
-    background-color: #eb974ebf;
+.ATMForms {
+    max-width: 120rem;
     height: 100vh;
-    font-weight: 400;
-    color: #333;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: linear-gradient(to bottom right, rgb(117, 13, 13),rgb(36, 6, 6));
+    padding: 3rem 4rem;
+
+}
+
+.formCon{
+    width: 42.5rem;
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: fixed;
+    align-items: center;
+    background-color: #e9aaaa;
+    padding: 4.5rem 5rem;
     
 }
 
-.main {
-    position: relative;
-    width: 100rem;
-    height: 60rem;
-    overflow: hidden;
+.ATMBox {
+    width: 40rem;
+    padding: 4.5rem 5rem;
+    background-color: #f08c8c;
+    justify-content: center;
     display: flex;
-}
+    align-items: center;
 
-
-.ATMForm {
-    height: 90vh;
-    display: grid;
-    margin: 5rem;
-    grid-template-columns: 1fr 1fr;
-    background-image: linear-gradient(to right bottom, rgba(235,151,78,0.75),rgba(230,116,34,0.75));
-    box-shadow: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    overflow: hidden;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    
 }
 
 .Register label {
@@ -55,9 +50,8 @@ body {
 }
 
 .Register input, .Register select {
-  width: 80%;
   margin: 1rem;
-  padding: 2px;
+  padding: 5px;
   font-size: 1.8rem;
   font-family: inherit;
   background-color: #fdf2e9;
@@ -76,46 +70,24 @@ body {
     
 
 }
-.btnFull {
-    font-size: 1.5rem;
-    letter-spacing: 0.5;
-    border: 2 solid gray;
-    padding: 0.5rem 1.3rem;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+
+.hidden {
+    display: none;
+    opacity: 0;
 }
   
 
-.ATMBox {
- padding: 1.5rem ;
- color: #fff;
- background-color: #cf711f;
- opacity: 1;
- height: 90vh;
- width: 100%;
- align-items: center;
- justify-content: center;
- transition: all 0.75;
- -webkit-transition: all 0.75;
- -moz-transition: all 0.75;
- -ms-transition: all 0.75;
- -o-transition: all 0.75;
-}
-
 
 .atmCardBox {
-    width: 100%;
-    height: 0 auto;
     background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.461),rgba(113, 19, 19, 0.888));
-    border: 2px solid wheat;
-    padding: 0.5rem 0;
-    display: grid;
-    position: relative;
-    margin: 2rem 0;
+    padding: 3rem 4.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* position: relative; */
+    width: 35.5rem;
     color: #333;
+    font-size: 1.4rem;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -123,39 +95,49 @@ body {
     -o-border-radius: 15px;
 }
 
-.hidden {
-    display: none;
+
+.tmLogo {
+  display: flex;
+  justify-content: space-between;   
 }
 
-.tmLogo, .holderLogo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.5rem;
-    position: relative;
-    
-    
+.tmLogo > img {
+    height: 2rem;
+    width: 3rem;
+}
+
+.atm-proxy {
+    width: 42.5rem;
+    text-align: center;
+    margin-left: 25rem;
+    padding: 5rem 10rem;
+    font-size: 1.4rem;
+    height: 25rem;
+    border: 2px dashed #bbb;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
 
 .list {
-    list-style-type: none;
+     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
     font-size: 2rem;
     
 }
 
 .listItemS {
-    background-color: #cf711f;
+     background-color: #cf711f;
     color: #fff;
-    height: 2rem;
+     height: 2rem;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    -o-border-radius: 5px; 
 }
 
 .listItem {
@@ -163,11 +145,18 @@ body {
 }
 
 .cardDigit {
+     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    letter-spacing: 1;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    margin-top: 2.8;
+    color: #333; 
+    /* text-align: center;
+    letter-spacing: 0.4;
     position: absolute;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
     text-align: center;
     top: 50%;
     left: 50%;
@@ -175,53 +164,41 @@ body {
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%); */
 }
 
-.atmType {
-    text-align: left;
+.account-type {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
-.images {
-    width: 2.2rem; 
-    height: 2.2rem;
 
-}
-
-.expDate {
-    text-align: center;
+.expiry {
+    /* text-align: center;
     position: absolute;
     justify-content: center;
-    display: block;
-    width: 5%;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     top: 62%;
-    right: 62%;
+    left: 50%;
     transform: translate(-62%, -62%);
     -webkit-transform: translate(-62%, -62%);
     -moz-transform: translate(-62%, -62%);
     -ms-transform: translate(-62%, -62%);
-    -o-transform: translate(-62%, -62%);
+    -o-transform: translate(-62%, -62%); */
+    text-align: center;
 }
 
-.holderName {
-    text-align: left;
-    margin-top: 10rem;
-}
-.materlogo {
-    width: 5rem;
-    height: 3rem;
-    justify-content: baseline;
-    margin-top: 5rem;
-
+.expiry > span {
+    color: #333;
 }
 
-.overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
+.holderLogo {
+ display: flex;
+ justify-content: space-between;
+}
+
+.holderLogo > img {
+ height: 2rem;
+ width: 3rem;
 }
